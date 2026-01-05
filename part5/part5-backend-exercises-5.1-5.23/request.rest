@@ -1,0 +1,40 @@
+###
+GET http://localhost:3003/api/users
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "name": "Matti Luukkainen",
+    "username": "mluukkai",
+    "password": "ilikecats"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2OTNmNTY3Yzc0MzhlYzQyMzQ5Mzc4YjAiLCJpYXQiOjE3NjU3NTg5NDV9.IeQmSYx3zQf3srXArI4waR5furqw74n_88QbOD2FnWE
+
+{
+  "title": "Clean Code: The Good, the Bad and the Ugly",
+  "author": "Daniel Gerlach",
+  "url": "https://gerlacdt.github.io/blog/posts/clean_code/",
+  "likes": "0"
+}
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "name": "Matti Luukkainen",
+    "username": "mluukkai",
+    "password": "ilikecats"
+}
+
+###
+POST http://localhost:3003/api/testing/reset
